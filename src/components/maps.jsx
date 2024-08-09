@@ -51,9 +51,15 @@ const Map = ({ selectedRow, highlightType }) => {
       try {
         const [peninsulaResponse, stateResponse, districtResponse] =
           await Promise.all([
-            fetch("/assets/India_States_simplified.geojson"),
-            fetch("/assets/India_States_simplified.geojson"),
-            fetch("/assets/India_Districts_simplified.geojson"),
+            fetch(
+              "./india-flood-database/assets/India_States_simplified.geojson"
+            ),
+            fetch(
+              "./india-flood-database/assets/India_States_simplified.geojson"
+            ),
+            fetch(
+              "./india-flood-database/assets/India_Districts_simplified.geojson"
+            ),
           ]);
 
         const peninsulaData = await peninsulaResponse.json();
