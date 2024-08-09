@@ -49,18 +49,16 @@ const Map = ({ selectedRow, highlightType }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [peninsulaResponse, stateResponse, districtResponse] =
+        const [stateResponse, districtResponse] =
           await Promise.all([
-            fetch("assets/India_Country_simplified.geojson"),
             fetch("assets/India_States_simplified.geojson"),
             fetch("assets/India_Districts_simplified.geojson"),
           ]);
 
-        const peninsulaData = await peninsulaResponse.json();
         const stateData = await stateResponse.json();
         const districtData = await districtResponse.json();
 
-        setPeninsulaData(peninsulaData);
+        setPeninsulaData(stateData);
         setStateData(stateData);
         setDistrictData(districtData);
       } catch (error) {
