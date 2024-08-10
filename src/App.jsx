@@ -9,13 +9,31 @@ import "./styles.css";
 
 const Navbar = () => (
   <div className="navbar">
-    <div className="navbar-brand">India Flood Database</div>
+    <div className="navbar-brand">India Flood Inventory</div>
   </div>
 );
 
 const Footer = () => (
   <div className="footer">
-    <div className="footer-container">About</div>
+    <div className="footer-about">
+      <a href="mailto:mt1210263@iitd.ac.in">Contact</a>
+      <br />
+      <a href="https://github.com/cpsy8/india-flood-database">Contribute</a>
+    </div>
+    <div className="footer-contacts">
+      Developer <br /> <br />
+      Champak Swargiary, B.Tech Student <br />
+      Indian Institute of Technology, Delhi <br />
+      <br /> <br />
+      Dr. Manabendra Saharia, Assistant Professor, <br /> Indian Institute of
+      Technology, Delhi <br />
+      IMD: Dr. OP Sreejith, Head, Climate Research & Services,
+      <br /> Indian Meteorological Department <br />
+      contact: <span className="email">msaharia@iitd.ac.in</span>
+    </div>
+    <div className="footer-logo">
+      <img src="./HydroSenseLogo.png" alt="HydroSenseIITD Logo" />
+    </div>
   </div>
 );
 
@@ -99,45 +117,8 @@ function App() {
     <div>
       <Navbar />
       <div className="container">
-        <div className="details">
-          <p>Published May 24, 2024 | Version 3.0</p>
-          <h3>
-            Visualisation of India Flood Inventory-Impacts (IFI-Impacts)
-            [1967-2023]: A multi-source national geospatial database to
-            facilitate comprehensive flood research
-          </h3>
-          <p>
-            This repository hosts the India Flood Inventory with Impacts
-            (IFI-Impacts) database. It contains flood event data sourced from
-            the Indian Meteorological Department from 1967-2023. It has
-            undergone extensive manual digitization, cleaning, and includes new
-            information to make it suitable for computational research in
-            hydroclimate.
-          </p>
-          <p>v1.0: India Flood Inventory (IFI) 1967-2016.</p>
-          <p>
-            v2.0: India Flood Inventory (IFI) 1967-2023. With impacts and
-            district flooded area.
-          </p>
-          <p>
-            v3.0: India Flood Inventory (IFI) 1967-2023. Updated with local
-            government codes (LGD) for state and district.
-          </p>
-          <p>
-            IFI v1.0 publication: Saharia, M., Jain, A., Baishya, R.R., Haobam,
-            S., Sreejith, O.P., Pai, D.S., Rafieeinasab, A., 2021. India flood
-            inventory: creation of a multi-source national geospatial database
-            to facilitate comprehensive flood research. Nat Hazards.
-            https://doi.org/10.1007/s11069-021-04698-6
-          </p>
-          <p>
-            IFI v2.0 publication: Saharia, Manabendra, et al. A District Level
-            Flood Severity Index for India. arXiv:2405.01602, arXiv, 1 May 2024.
-            arXiv.org, https://doi.org/10.48550/arXiv.2405.01602. [Under Review]
-          </p>
-        </div>
         <div className="filter-section">
-          <h4>Apply filter to the Data</h4>
+          <h4 className="header">Apply filter to the Data</h4>
           <Filters
             states={Object.keys(districts_of_states).map((state) => ({
               label: state,
@@ -150,7 +131,23 @@ function App() {
         </div>
         <div className="content">
           <div className="table-box">
-            <div className="box-header">Data Table</div>
+            <div className="table-header-box">
+              <div className="box-header"> Data Table</div>
+              <div className="data-interaction">
+                <a
+                  href="https://zenodo.org/api/records/11275211/files-archive"
+                  className="download-button"
+                >
+                  Download
+                </a>
+                <a
+                  href="https://zenodo.org/doi/10.5281/zenodo.4742142"
+                  className="info-button"
+                >
+                  More Info
+                </a>
+              </div>
+            </div>
             <div className="datatable-container">
               <DataTable data={filteredData} onRowClick={handleRowClick} />
             </div>
@@ -171,6 +168,47 @@ function App() {
               <RowDetails row={selectedRow} />
             </div>
           </div>
+        </div>
+        <div className="details">
+          <h3>
+            India Flood Inventory [1967-2023]: A national geospatial database to
+            facilitate comprehensive flood research
+          </h3>
+          <p>
+            This repository hosts the India Flood Inventory with Impacts
+            (IFI-Impacts) database. It contains flood event data sourced from
+            the Indian Meteorological Department from 1967-2023. It has
+            undergone extensive manual digitization, cleaning, and includes new
+            information to make it suitable for computational research in
+            hydroclimate.
+          </p>
+          <p>v1.0: India Flood Inventory (IFI) 1967-2016.</p>
+          <p>
+            v2.0: India Flood Inventory (IFI) 1967-2023. With impacts and
+            district flooded area.
+          </p>
+          <p>
+            v3.0: India Flood Inventory (IFI) 1967-2023. Updated with local
+            government codes (LGD) for state and district.
+          </p>
+          <h4>Citations</h4>
+          <p>
+            IFI v1.0 publication: Saharia, M., Jain, A., Baishya, R.R., Haobam,
+            S., Sreejith, O.P., Pai, D.S., Rafieeinasab, A., 2021. India flood
+            inventory: creation of a multi-source national geospatial database
+            to facilitate comprehensive flood research. Nat Hazards.{" "}
+            <a href="https://doi.org/10.1007/s11069-021-04698-6">
+              read this article
+            </a>
+          </p>
+          <p>
+            IFI v2.0 publication: Saharia, Manabendra, et al. A District Level
+            Flood Severity Index for India. arXiv:2405.01602, arXiv, 1 May 2024.
+            arXiv.org,. [Under Review]{" "}
+            <a href="https://doi.org/10.48550/arXiv.2405.01602">
+              read this article
+            </a>
+          </p>
         </div>
       </div>
       <Footer />
