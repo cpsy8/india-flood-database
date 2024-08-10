@@ -18,7 +18,7 @@ const Footer = () => (
     <div className="footer-about">
       <a href="mailto:mt1210263@iitd.ac.in">Contact</a>
       <br />
-      <a href="https://github.com/cpsy8/india-flood-database">Contribute</a>
+      <a href="https://github.com/cpsy8/india-flood-inventory">Contribute</a>
     </div>
     <div className="footer-contacts">
       Developer <br /> <br />
