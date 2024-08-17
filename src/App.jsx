@@ -9,7 +9,12 @@ import "./styles.css";
 
 const Navbar = () => (
   <div className="navbar">
-    <div className="navbar-brand">India Flood Inventory</div>
+    <div className="navbar-brand">
+      India Flood Inventory <br />
+      <span className="brand-title">
+        A national geospatial database to facilitate flood research.
+      </span>
+    </div>
   </div>
 );
 
