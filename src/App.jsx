@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, input } from "react";
 import data from "./data.json";
 import DataTable from "./components/datatable.jsx";
 import Filters from "./components/filters.jsx";
@@ -15,24 +15,37 @@ const Navbar = () => (
 
 const Footer = () => (
   <div className="footer">
-    <div className="footer-about">
-      <a href="mailto:mt1210263@iitd.ac.in">Contact</a>
-      <br />
-      <a href="https://github.com/cpsy8/india-flood-inventory">Contribute</a>
-    </div>
     <div className="footer-contacts">
       Developer <br /> <br />
       Champak Swargiary, B.Tech Student <br />
       Indian Institute of Technology, Delhi <br />
-      <br /> <br />
+      contact: <span className="email">mt1210263@iitd.ac.in</span>
+      <br />
+      <br />
       Dr. Manabendra Saharia, Assistant Professor, <br /> Indian Institute of
       Technology, Delhi <br />
       IMD: Dr. OP Sreejith, Head, Climate Research & Services,
       <br /> Indian Meteorological Department <br />
       contact: <span className="email">msaharia@iitd.ac.in</span>
     </div>
-    <div className="footer-logo">
-      <img src="./HydroSenseLogo.png" alt="HydroSenseIITD Logo" />
+    <div className="footer-images">
+      <div className="images">
+        <img
+          className="iitd-logo"
+          src="./IITD_logo.png"
+          alt="Indian Institute of Technology Delhi"
+        />
+        <img
+          className="imd-logo"
+          src="./IMD_logo.png"
+          alt="Indian Metrological Department"
+        />
+        <img
+          className="h-logo"
+          src="./HydroSenseLogo.png"
+          alt="HydroSenseIITD Logo"
+        />
+      </div>
     </div>
   </div>
 );

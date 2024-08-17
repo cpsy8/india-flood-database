@@ -354,17 +354,14 @@ tr:hover {
 }
 
 .footer {
+  font-size: 14px;
   display: flex;
-  justify-content: space-between;
-  position: relative;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: fit-content;
   padding: 20px 50px;
-  background-color: rgb(48, 61, 244);
+  background-color: #2c3e50;
   box-shadow: 0 2px 4px 0 rgba(34, 95, 226, 0.2);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .footer a {
@@ -377,18 +374,38 @@ tr:hover {
   text-decoration: underline;
 }
 
-.footer-about,
 .footer-contacts,
-.footer-logo {
+.footer-images {
   flex: 1;
 }
 
-.footer-logo {
-  text-align: right;
+.footer-images {
+  display: flex;
+  align-items: center;
 }
 
-.footer-logo img {
-  width: 30%;
+.images {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+}
+
+.iitd-logo {
+  margin: 0 20px;
+  width: 15%;
+  height: auto;
+}
+
+.imd-logo {
+  margin: 0 20px;
+  width: 14%;
+  height: auto;
+}
+
+.h-logo {
+  margin: 0 20px;
+  width: 15%;
   height: auto;
 }
 
