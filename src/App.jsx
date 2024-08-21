@@ -12,7 +12,7 @@ const Navbar = () => (
     <div className="navbar-brand">
       India Flood Inventory <br />
       <span className="brand-title">
-        A national geospatial database to facilitate flood research.
+        A National Geospatial Database to facilitate Flood Research
       </span>
     </div>
   </div>
@@ -24,32 +24,42 @@ const Footer = () => (
       Developer <br /> <br />
       Champak Swargiary, B.Tech Student <br />
       Indian Institute of Technology, Delhi <br />
-      contact: <span className="email">mt1210263@iitd.ac.in</span>
       <br />
-      <br />
-      Dr. Manabendra Saharia, Assistant Professor, <br /> Indian Institute of
-      Technology, Delhi <br />
-      IMD: Dr. OP Sreejith, Head, Climate Research & Services,
-      <br /> Indian Meteorological Department <br />
+      Dr. Manabendra Saharia <br />
+      Assistant Professor, Department of Civil Engineering <br />
+      Associate Faculty, Yardi School of Artificial Intelligence <br />
+      Indian Institute of Technology, Delhi <br />
       contact: <span className="email">msaharia@iitd.ac.in</span>
+      <br />
+      <br />
+      Dr. OP Sreejith <br />
+      Head, Climate Research & Services <br />
+      Indian Meteorological Department (IMD) <br />
+      contact: <span className="email">crs.pune@imd.gov.in</span>
     </div>
     <div className="footer-images">
       <div className="images">
-        <img
-          className="iitd-logo"
-          src="./IITD_logo.png"
-          alt="Indian Institute of Technology Delhi"
-        />
-        <img
-          className="imd-logo"
-          src="./IMD_logo.png"
-          alt="Indian Metrological Department"
-        />
-        <img
-          className="h-logo"
-          src="./HydroSenseLogo.png"
-          alt="HydroSenseIITD Logo"
-        />
+        <a href="https://home.iitd.ac.in/" className="image-link">
+          <img
+            className="iitd-logo"
+            src="./IITD_logo.png"
+            alt="Indian Institute of Technology Delhi"
+          />
+        </a>
+        <a href="https://mausam.imd.gov.in/" className="image-link">
+          <img
+            className="imd-logo"
+            src="./IMD_logo.png"
+            alt="Indian Metrological Department"
+          />
+        </a>
+        <a href="https://hydrosense.iitd.ac.in/" className="image-link">
+          <img
+            className="h-logo"
+            src="./HydroSenseLogo.png"
+            alt="HydroSenseIITD Logo"
+          />
+        </a>
       </div>
     </div>
   </div>
@@ -182,7 +192,7 @@ function App() {
               </div>
             </div>
             <div className="row-details">
-              <div className="box-header">Info</div>
+              <div className="box-header">Flood Info</div>
               <RowDetails row={selectedRow} />
             </div>
           </div>
@@ -211,20 +221,12 @@ function App() {
           </p>
           <h4>Citations</h4>
           <p>
-            IFI v1.0 publication: Saharia, M., Jain, A., Baishya, R.R., Haobam,
-            S., Sreejith, O.P., Pai, D.S., Rafieeinasab, A., 2021. India flood
-            inventory: creation of a multi-source national geospatial database
-            to facilitate comprehensive flood research. Nat Hazards.{" "}
             <a href="https://doi.org/10.1007/s11069-021-04698-6">
-              read this article
-            </a>
-          </p>
-          <p>
-            IFI v2.0 publication: Saharia, Manabendra, et al. A District Level
-            Flood Severity Index for India. arXiv:2405.01602, arXiv, 1 May 2024.
-            arXiv.org,. [Under Review]{" "}
-            <a href="https://doi.org/10.48550/arXiv.2405.01602">
-              read this article
+              IFI v1.0 publication: Saharia, M., Jain, A., Baishya, R.R.,
+              Haobam, S., Sreejith, O.P., Pai, D.S., Rafieeinasab, A., 2021.
+              India flood inventory: creation of a multi-source national
+              geospatial database to facilitate comprehensive flood research.
+              Nat Hazards.{" "}
             </a>
           </p>
         </div>

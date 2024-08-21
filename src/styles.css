@@ -273,6 +273,7 @@ tr:hover {
 
 .row-details {
   width: 100%;
+  padding: 10px;
   height: fit-content;
   min-height: 200px;
   margin-left: 2px;
@@ -284,7 +285,7 @@ tr:hover {
 
 .row-details-container {
   font-size: 12px;
-  margin: 10px;
+  margin: 10px 0;
   display: flex;
 }
 
@@ -366,16 +367,6 @@ tr:hover {
   color: rgb(255, 255, 255);
 }
 
-.footer a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  color: #ddd;
-  text-decoration: underline;
-}
-
 .footer-contacts,
 .footer-images {
   flex: 1;
@@ -383,31 +374,38 @@ tr:hover {
 
 .footer-images {
   display: flex;
+  justify-content: right;
   align-items: center;
 }
 
 .images {
   display: flex;
-  justify-content: right;
   align-items: center;
-  width: 100%;
+  justify-content: right;
+  width: 80%;
+  height: 80%;
+}
+
+.image-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 80%;
 }
 
 .iitd-logo {
-  margin: 0 20px;
-  width: 15%;
+  width: 80%;
   height: auto;
 }
 
 .imd-logo {
-  margin: 0 20px;
-  width: 14%;
+  width: 75%;
   height: auto;
 }
 
 .h-logo {
-  margin: 0 20px;
-  width: 15%;
+  width: 80%;
   height: auto;
 }
 
